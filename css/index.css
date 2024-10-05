@@ -1,0 +1,82 @@
+@font-face{
+  font-family: firaNormal;
+  src: url(fonts/Fira_Sans/FiraSans-Regular.ttf);
+}
+@font-face{
+  font-family: firaBold;
+  src: url(fonts/Fira_Sans/FiraSans-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: #181818;
+}
+body h1, h2, h3{
+  font-family: firaBold;
+}
+body h2{
+  text-align: left;
+}
+body p{
+  font-family: firaNormal;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pageInfo iframe{
+  width: 85%;
+  border: none;
+  border-radius: 16px;
+}
+.pageContent iframe{
+  width: 100%;
+  border: none;
+  background: none;
+}
+.pageShares a{
+  text-decoration: none;
+  padding: 4px;
+}
+
+.gameInfo {
+  padding-left: 10px;
+}
+.rod1{
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      background-color: #323232;
+      border-radius: 64px;
+}
+.rod1 h1{
+  font-size: 12px;
+  font-family: firaBold;
+}
+.rod1 p{
+  font-size: 10px;
+  font-family: firaNormal;
+}
+.rod1 a{
+  padding-left: 140px;
+}
+.rod1 button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #0fcf00;
+}
+.rod1 button img{
+  padding-right: 5px;
+}
+.rod1 button:hover{
+  background-color: #0f9f00;
+}
+.rod1 img{
+  padding-left: 8px;
+}
