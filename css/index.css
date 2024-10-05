@@ -1,8 +1,16 @@
-@font-face{
+:root {
+  /* you can remove these variables */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+@font-face {
   font-family: firaNormal;
   src: url(fonts/Fira_Sans/FiraSans-Regular.ttf);
 }
-@font-face{
+@font-face {
   font-family: firaBold;
   src: url(fonts/Fira_Sans/FiraSans-Bold.ttf);
 }
@@ -13,55 +21,96 @@ body {
   color: #ffffff;
   background-color: #181818;
 }
-body h1, h2, h3{
+body h1,
+h2,
+h3 {
   font-family: firaBold;
 }
-body h2{
+body h2 {
   text-align: left;
 }
-body p{
+body p {
   font-family: firaNormal;
   font-size: 14px;
   text-align: center;
 }
 
-.pageInfo iframe{
-  width: 85%;
-  border: none;
-  border-radius: 16px;
+.iframe-wrapper {
+  height: 250px;
+  padding: 0px;
+  max-width: 85%;
+  margin: auto;
 }
-.pageContent iframe{
+
+.iframe-wrapper iframe {
   width: 100%;
+  height: 100%;
   border: none;
-  background: none;
 }
-.pageShares a{
+
+.pageInfo p {
+  font-size: 1.4rem;
+}
+
+
+.pageContent > h2 {
+  text-align: center;
+  font-size: 2rem !important;
+  padding: 0;
+}
+
+.pageShares a {
   text-decoration: none;
   padding: 4px;
 }
 
 .gameInfo {
-  padding-left: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.rod1{
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      background-color: #323232;
-      border-radius: 64px;
+
+.gameInfo > :first-child {
+  flex: 1;
 }
-.rod1 h1{
-  font-size: 12px;
+
+.gameInfo > div:last-of-type {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rod1 {
+  display: flex;
+  color: #ffffff;
+  background-color: #323232;
+  border: 2px solid #1a1919;
+  max-width: 500px;
+  margin: auto;
+}
+
+.rod1 > :first-child {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.rod1 > :first-child > img {
+  flex: 1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.rod1 h1 {
+  font-size: 16px;
   font-family: firaBold;
 }
-.rod1 p{
-  font-size: 10px;
+.rod1 p {
+  font-size: 14px;
   font-family: firaNormal;
 }
-.rod1 a{
-  padding-left: 140px;
-}
-.rod1 button{
+
+.rod1 button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,12 +120,70 @@ body p{
   border-radius: 50%;
   background-color: #0fcf00;
 }
-.rod1 button img{
-  padding-right: 5px;
-}
-.rod1 button:hover{
+
+.rod1 button:hover {
   background-color: #0f9f00;
+  cursor: pointer;
 }
-.rod1 img{
-  padding-left: 8px;
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.hr-line {
+  border: 1px solid #97979760;
+}
+
+.pageShares {
+  padding-bottom: 10px;
+}
+
+.pageShares h3 {
+  font-size: 1.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Responsive */
+
+/* small screen */
+@media (max-width: 640px) {
+  .rod1 {
+    flex-wrap: wrap;
+  }
+  .rod1 > :first-child {
+    width: 100%;
+  }
+
+  .gameInfo {
+    padding-bottom: 10px;
+  }
+
+  .iframe-wrapper {
+    height: auto;
+  }
+
+  .pageInfo p {
+    font-size: 1rem;
+  }
+}
+
+/* medium screen */
+@media (min-width: 640px) and (max-width: 768px) {
+}
+
+/* large screen */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* extra large screen */
+@media (min-width: 1024px) {
 }
